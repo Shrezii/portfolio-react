@@ -1,0 +1,134 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+/* LINKS */
+.links {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Gradient hover text */
+.links a:hover {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient underline */
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* RESUME BUTTON */
+.resume {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(124, 124, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.resume:hover {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #000 !important;
+}
+
+/* MOBILE */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .mobile a {
+    padding: 12px 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .mobile a:hover {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.links a.active {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links a.active::after {
+  width: 100%;
+}
