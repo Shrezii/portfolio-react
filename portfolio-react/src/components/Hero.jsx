@@ -46,21 +46,40 @@ export default function Hero() {
         </motion.p>
 
         {/* Resume buttons */}
-        <motion.div style={{ display: "flex", gap: "18px", marginTop: "30px" }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          style={{ display: "flex", gap: "18px", marginTop: "30px", flexWrap: "wrap" }}
+        >
+          {/* VIEW RESUME */}
           <motion.a
             href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{
+              y: -4,
+              scale: 1.05,
+              boxShadow: "0 10px 30px rgba(124,124,255,0.45)"
+            }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 300, damping: 18 }}
             style={btnPrimary}
           >
             View Resume
           </motion.a>
 
+          {/* DOWNLOAD RESUME */}
           <motion.a
             href={resumePdf}
             download
-            whileHover={{ scale: 1.05 }}
+            whileHover={{
+              y: -3,
+              scale: 1.04,
+              boxShadow: "0 8px 24px rgba(124,124,255,0.25)"
+            }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
             style={btnSecondary}
           >
             Download
@@ -77,7 +96,8 @@ const btnPrimary = {
   background: "linear-gradient(90deg, var(--primary), var(--secondary))",
   color: "#000",
   fontWeight: 600,
-  textDecoration: "none"
+  textDecoration: "none",
+  display: "inline-block"
 };
 
 const btnSecondary = {
@@ -86,5 +106,6 @@ const btnSecondary = {
   border: "1px solid var(--primary)",
   color: "var(--primary)",
   fontWeight: 600,
-  textDecoration: "none"
+  textDecoration: "none",
+  display: "inline-block"
 };
