@@ -17,22 +17,6 @@ export default function Footer() {
       Designed & Built by{" "}
       <span style={{ color: "var(--primary)" }}>Cibi Chakravarthy</span> © 2025
       <div style={{ marginTop: "10px", fontSize: "0.9rem" }}>
-        <a
-          href="https://github.com/Shrezii"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "var(--secondary)", marginRight: "12px" }}
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/cibi-chakravarthy-g-52920a311"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "var(--secondary)" }}
-        >
-          LinkedIn
-        </a>
       </div>
     </motion.footer>
   );

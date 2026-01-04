@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap");
 
 :root {
   --bg: #0b0b14;
@@ -16,17 +16,23 @@
   box-sizing: border-box;
 }
 
-/* Smooth scroll */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(180deg, #000, #0b0b14, #13132a);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.3px;
 }
 
 /* Layout */
@@ -36,7 +42,7 @@ body {
   padding: 0 20px;
 }
 
-/* Reduce motion (accessibility = pro) */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -44,7 +50,7 @@ body {
   }
 }
 
-/* GPU-friendly animations */
+/* GPU-friendly */
 .motion {
   will-change: transform, opacity;
 }
