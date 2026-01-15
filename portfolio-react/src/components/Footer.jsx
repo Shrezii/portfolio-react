@@ -15,7 +15,7 @@ export default function Footer() {
       }}
     >
       Designed & Built by{" "}
-      <span style={{ color: "var(--primary)" }}>Cibi Chakravarthy</span> © 2025
+      <span style={{ color: "var(--primary)" }}>Cibi Chakravarthy</span> © 2026
       <div style={{ marginTop: "10px", fontSize: "0.9rem" }}>
       </div>
     </motion.footer>
